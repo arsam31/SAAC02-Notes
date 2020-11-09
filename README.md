@@ -516,12 +516,9 @@ DNS Root is also known as **DNS Root Zone.**
 `www.netflix.com.`
 
 The period is assumed to be there in a browser when it's not present.
-The DNS Root is hosted on DNS Root Servers (13). These are hosted
-by 12 major companies.
+
 
 **Root Hints** is a pointer to the DNS Root server
-Root Hints are just a list of (13) DNS Root Servers,provided by vendors(microsoft)
-
 
 Process
 

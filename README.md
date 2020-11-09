@@ -491,13 +491,14 @@ It is a huge database and has to be distributed.
 
 Parts of the DNS system
 
-- DNS Client: Piece of software running on the OS for a device you're using.
-- Resolver: Software on your device or server which queries DNS on your behalf.
+- DNS Client: Piece of software running on the OS for a device you're using.(your laptop,phone,PC)
+- Resolver: Software on your device or server which queries DNS on your behalf.(generally DNS Client asks the DNS resolver to query)
 - Zone: A part of the DNS database.
   - This would be www.amazon.com
   - What the data is, the substance
 - Zonefile: physical database for a zone
   - How physically that data is stored
+- DNS Record: convert the www.amazon.com to it's IP address
 - Nameserver: where zonefiles are hosted
 
 Steps:
@@ -510,6 +511,7 @@ It then passes the information back to the client.
 
 The starting point of DNS.
 DNS names are read right to left with multiple parts separated by periods.
+DNS Root is also known as **DNS Root Zone.**
 
 `www.netflix.com.`
 
@@ -518,6 +520,8 @@ The DNS Root is hosted on DNS Root Servers (13). These are hosted
 by 12 major companies.
 
 **Root Hints** is a pointer to the DNS Root server
+Root Hints are just a list of (13) DNS Root Servers,provided by vendors(microsoft)
+
 
 Process
 

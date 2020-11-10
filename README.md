@@ -486,6 +486,36 @@ system in place.
 
 ### Domain Name System (DNS)
 
+
+=============================================================================================================================================================================
+
+my laptop or my chrome browser is DNS CLIENT
+DNS Client asks DNS Resolver to query the data
+a server which is pre-installed on my laptop or maybe on my internet router,or physically somewhere else is called DNS resolver
+DNS resolver finds the correct NameServer
+NameServer is something that hosts a zoneFile
+ZoneFile is a database in which DNS record exists.
+DNS Record is (www.facebook.com=>IP Address)
+
+This whole area where the DNS Record is found in specific zoneFile is called ZONE
+
+----------------------------------------
+
+In domain name we start from right to left
+the top right part is called DNS Root or Root Zone
+for example in www.facebook.com-> Root Zone is .com
+Root Zone is a database which is hosted on Root Servers
+Root Servers are 13 in total.RootServers are special type of nameServers, which stores RootZones
+there are not actually 13 rootServers because each server is a cluster of different servers which are distributed globally.
+but still each server is represented as an entity
+ROOT HINT files are pre-installed by the OS vendor(windows) in your laptop, which holds a list of Root Servers
+RootHints are pointer to DNS Root Server
+
+RootZones are managed by IANA
+RootServers are managed by 12 different organizations
+So both are managed differently
+
+==========================================================================================================================================================================
 DNS is a discovery service. Translates machines into humans and vice-versa.
 It is a huge database and has to be distributed.
 

@@ -611,6 +611,7 @@ records into the zone file for the top level domain.
 Hosted on four managed name servers
 
 - Can be **public** or **private**
+- Stores records(recordSets)
 
 ### DNS Record
 

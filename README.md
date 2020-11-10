@@ -496,7 +496,7 @@ Dns resolver finds the correct NameServer.
 NameServer is something that hosts a zoneFile.
 ZoneFile is a database in which DNS record exists.
 DNS Record is (www.facebook.com=>IP Address).
-
+In AWS ZoneFiles are known as Hosted Zones.
 This whole area where the DNS Record is found in specific zoneFile is called ZONE.
 
 ----------------------------------------

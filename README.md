@@ -684,8 +684,9 @@ Once authenticated, that identity is known as an **authenticated identity**
 #### Inline Policies and Managed Policies
 
 - Inline Policy: grants access and assigned on each accounts individually.
-                 - it is used when we want to give SPECIAL ACCESS to INDIVISUAL , or SPECIALLY BLOCK ACCESS to indivisual user.
-- Managed Policy (best practice): one policy is applied to all users at once.
+- Inline Policy is used when we want to give SPECIAL ACCESS to INDIVISUAL , or SPECIALLY BLOCK ACCESS to indivisual user.
+
+- Managed Policy (best practice): one policy is applied to all users at once.These are resuable.Once edited this policy, it will apply to all users.
 
 ### IAM Users
 

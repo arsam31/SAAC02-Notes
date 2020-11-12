@@ -748,6 +748,11 @@ An example that leads to confusion:
 
 These two ARNs do not overlap
 
+
+* If you need to perform actions on both the bucket and the objects you must add both to the resources section of the policy.
+* Imagine you have a box full of cats, if I tell you you can play with the cats but not move the box, then it's arn:aws :s3:::catgifs/*
+* You can move the box but not play with the cats, then arn:aws :s3:::catgifs
+
 #### IAM FACTS
 
 - 5,000 IAM users per account

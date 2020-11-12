@@ -679,10 +679,12 @@ Once authenticated, that identity is known as an **authenticated identity**
 - Explicit Deny: Denies access to a particular resource cannot be overruled.
 - Explicit Allow: Allows access so long there is not an explicit deny.
 - Default Deny (Implicit): IAM identities start off with no resource access.
+- Explicit Deny is more powerful than Explicit Allow.
 
 #### Inline Policies and Managed Policies
 
 - Inline Policy: grants access and assigned on each accounts individually.
+                 - it is used when we want to give SPECIAL ACCESS to INDIVISUAL , or SPECIALLY BLOCK ACCESS to indivisual user.
 - Managed Policy (best practice): one policy is applied to all users at once.
 
 ### IAM Users

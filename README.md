@@ -620,6 +620,11 @@ Hosted on four managed name servers
 you will make both types of record, A and AAAA.
 - CNAME Record Type: Allows DNS shortcuts to reduce admin overhead.
 CNAMES cannot point directly at an IP address and only another name.
+* 1: CNAME records can be used to alias one name to another. CNAME stands for Canonical Name.
+* 2: A CNAME record must always point to another domain name and never directly to an IP address.
+* Example
+  - An 'A' record for 'example.com' pointing to the server IP address
+  - A 'CNAME' record for 'www.example.com' pointing to 'example.com'
 - MX records: How emails are sent. They have two main parts:
   - Priority: Lower values for the priority field are higher priority.
   - Value

@@ -684,9 +684,16 @@ Once authenticated, that identity is known as an **authenticated identity**
 #### Inline Policies and Managed Policies
 
 - Inline Policy: grants access and assigned on each accounts individually.
-- Inline Policy is used when we want to give SPECIAL ACCESS to INDIVISUAL , or SPECIALLY BLOCK ACCESS to indivisual user.
+- Inline Policy is used when we want to give SPECIAL ACCESS to single user , or SPECIALLY DENY to single user.
 
 - Managed Policy (best practice): one policy is applied to all users at once.These are resuable.Once edited this policy, it will apply to all users.
+
+
+#### Types of Managed Policies
+
+- AWS Managed Policy: AWS manages these policies and available for you to use.
+- Customer Managed Policy: Customers creates custom policies according to their requirements.
+
 
 ### IAM Users
 

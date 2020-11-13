@@ -933,8 +933,8 @@ They don't grant permissions themselves, just act as a barrier.
 
 #### Allow List vs Deny List
 
-You can block by default and allow certain services which is Allowable List.
-You can allow by default and block certain services which is Blockable List.
+You can block by default and allow access to certain services which is Allow List.
+You can allow by default and block access to certain services which is Deny List.
 
 Deny list is the default.
 

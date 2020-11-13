@@ -917,6 +917,8 @@ Allows you to switch between accounts from the command line
 
 Can be used to restrict what member accounts in an org can do.
 
+The root account does have full access to the account unless there is an SCP applicable to that account. The SCP takes priority over the root privileges. The only exception is for the management (former master account), SCPs cannot restrict that account.
+
 JSON policy document that can be attached:
 
 - To the org as a whole by attaching to the root container.
@@ -930,6 +932,9 @@ SCPs limit what the account, **including root** can do inside that account.
 They don't grant permissions themselves, just act as a barrier.
 
 #### Allow List vs Deny List
+
+You can block by default and allow certain services which is Allowable List.
+You can allow by default and block certain services which is Blockable List.
 
 Deny list is the default.
 

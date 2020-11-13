@@ -832,6 +832,7 @@ which suggested a Role might be the ideal identity to use.
 - Trust Policy: to trust the Lambda Service
 - Permission Policy: to grant access to AWS services.
 
+Running a Lambda function is known as Function Execuion or Function Invocation 
 When this is run, it uses the sts:AssumeRole to generate keys to
 CloudWatch and S3.
 

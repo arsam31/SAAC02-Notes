@@ -999,6 +999,9 @@ services offered by AWS. A lot less admin overhead.
 This is a public service, this can be used from AWS VPC or on premise
 environment.
 
+CloudWatch integrates with many aws services like, cloudTrial, Lambda, EC2, Route53 etc.
+Any service that can integrate with cloudWatch logs, can store data directly to this product.
+For anything outside of AWS, for logging custom applications we can use **unified CloudWatch Agent**
 This allows to **store**, **monitor** and **access** logging data.
 
 - This is a piece of information data and a timestamp

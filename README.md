@@ -1001,34 +1001,34 @@ environment.
 
 This allows to **store**, **monitor** and **access** logging data.
 
-CloudWatch integrates with many aws services like, cloudTrial, Lambda, EC2, Route53 etc.
+- This is a piece of information data and a timestamp
+- Can be more fields, but at least these two
+
+Security is provided with IAM roles or Service roles
+
+CloudWatch logs integrates with many aws services like, cloudTrial, Lambda, EC2, Route53 etc.
 Any service that can integrate with cloudWatch logs, can store data directly to this product.
 
 For anything outside of AWS, for logging custom applications we can use **unified CloudWatch Agent**
 
-
-- This is a piece of information data and a timestamp
-- Can be more fields, but at least these two
-
-Comes with some AWS Integrations.
-Security is provided with IAM roles or Service roles
-Can generate metrics based on logs **metric filter**
+Can generate metrics based on the logs which is called **metric filter**. And on that generated metric we can set alarm.
 
 #### Architecture of CloudWatch Logs
 
 It is a regional service `us-east-1`
 
 Need logging sources such as external APIs or databases. This sends
-information as **log events**. These are stored in **log streams**. This is a
+information as **log events**. These are stored in **log streams**. Log streams are
 sequence of log events from the same source.
 
-**Log Groups** are containers for multiple logs streams of the same
+**Log Groups** are for multiple logs streams of the same
 type of logging. This also stores configuration settings such as
 retention settings and permissions.
 
 Once the settings are defined on a log group, they apply to all log streams
-in that log group. Metric filters are also applied on the log groups.
+in that log group. Metric filters are also defined in the log groups.
 
+(See the diagram for better understanding)
 ### CloudTrail Essentials
 
 Concerned with who did what.

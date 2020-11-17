@@ -1179,6 +1179,7 @@ We could then change our DNS and move customers to a backup website on S3.
 
 - Cost to store data, per GB / month fee
   - Prorated for less than a GB or month.
+  - Prorated means if we store 200MB for 5 days, we will be charged for 200MB and 5 days.
 - Data transfer fee
   - Data in is always free
   - Data out is a per GB charge

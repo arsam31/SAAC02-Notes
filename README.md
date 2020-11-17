@@ -1201,6 +1201,7 @@ Versioning
 - Versioning can be suspended and enabled again.
 - This allows for multiple versions of objects within a bucket.
 - Objects which would modify objects **generate a new version** instead.
+- The attribute, **ID of object**, is **not null**.
 
 The latest or current version is always returned when an object version
 is not requested.

@@ -1107,7 +1107,7 @@ bucket.
 This is a **resource policy**
 
 - controls who has access to that resource
-- can allow or deny access from different accounts
+- can allow or deny access to different accounts
 - can allow or deny anonymous principals
   - this is explicitly declared in the bucket policy itself.
 

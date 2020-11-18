@@ -1314,14 +1314,14 @@ parties know how the data will be hidden.
 ### Key Management Service (KMS)
 
 - Regional service
-  - Every region is isolated when using KMS.
+  - Every region is isolated when using KMS.means you can think of it as a separate service in each region
 - Public service
   - Occupies the AWS public zone and can be connected to from anywhere.
 - Create, store, and manage keys.
   - Can handle both symmetric and asymmetric keys.
 - KMS can perform cryptographic operations itself.
 - Keys never leave KMS.
-- Keys use **FIPS 140-2 (L2)** security standard.
+- Keys use **FIPS 140-2 (L2)** -> It is US security standard.
   - Some features are compliant with Level 3.
   - All features are compliant with Level 2.
 
@@ -1341,6 +1341,8 @@ It is logical and contains
 - Key Policy: a type of resource policy
 - Description
 - State of the Key: active or not
+
+(See diagram to understand CMK)
 
 #### Data Encryption Key (DEK)
 

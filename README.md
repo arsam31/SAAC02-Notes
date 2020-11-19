@@ -1385,8 +1385,8 @@ Architecture
 
 All CMKs support key rotation.
 
-- AWS automatically rotates the keys every 1095 days (3 years)
-- Customer managed keys rotate every year.
+- AWS automatically rotates the keys every 1095 days (3 years) (rotation can not be disable)
+- Customer managed keys rotate every year. (rotation is optional)
 
 CMK itself contains:
 
@@ -1400,7 +1400,7 @@ potentially at a different CMK.
 
 #### Key Policy (resource policy)
 
-- Every CMK has one.
+- Every CMK has one key policy.
 - Customer managed CMKs can adjust the policy.
 - Unlike other policies, KMS has to be explicitly told that keys trust the AWS
 account that they're in.
@@ -1412,6 +1412,7 @@ in that account.
 needs to be trusted by the key.
 - It sets up this chain of trust from the key to the account to IAM and then
 to an IAM user, if they're granted any identity permissions.
+- **Role Separation** allow you to grant the permission to one group to encrypt data, and another group to decrypt that data
 
 ### KMS Key Demo
 

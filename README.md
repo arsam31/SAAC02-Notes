@@ -1559,9 +1559,9 @@ All of the other storage classes trade some of these compromises for another.
 - Cheaper rate to store data you will rarely need, but if you do need it, you
 need it quickly.
 - ~54% cheaper than S3 standard.
-- Minimum 128KB charge for each object.
+- Minimum 128KB charge for each object.(means if you store 100kb object, you will be charged 128kb minimum)
   - Cost benefits might be negated for smaller objects.
-- 30 days minimum duration charge per object.
+- 30 days minimum duration charge per object.(means if you store object for 1 day, you will be charged for 30 days minimum)
 - Retrieval fee for every GB of data retrieved from this class.
 - 99.9% availability, slightly lower than standard S3.
 

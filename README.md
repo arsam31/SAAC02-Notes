@@ -1666,13 +1666,13 @@ the source account access to the bucket.
 #### S3 Replication Options
 
 - Which objects are replicated.
-  - Default is all source objects, but can select a smaller subset of objects.
+  - Default is all source objects, but can select a smaller subset of objects.(subset means using prefix,tags)
 - Select which storage class the destination bucket will use.
   - Default is the same type of storage, but this can be changed.
 - Define the ownership of the objects.
   - The default is they will be owned by the same account as the source bucket.
-  - If the buckets are in different accounts, the objects in the destination
-  could be owned by the source account and not allowed access.
+  - If the buckets are in different accounts, the objects by default in the destination
+  will be owned by the source account, and this can lead to a situation for destination account not to be able to read those objects because they are owned by diferent aws account.You can change it and set destination account as default owner.
 - Replication Time Control (RTC)
   - Adds a guaranteed level of SLA within 15 minutes for extra cost.
   - This is useful for buckets that must be in sync the whole time.
@@ -1683,25 +1683,25 @@ the source account access to the bucket.
   - If you enable replication on a bucket that already has objects, the old
   objects will not be replicated.
 - Both buckets must have versioning enabled.
-- It is a one way replication process only.
+- It is a one way replication process only.(means you can't add objects manually to destination and replicate them to source bucket)
 - Replication by default can handle objects that are unencrypted or SSE-S3.
   - With configuration it can handle SSE-KMS, but KMS requires more
 configuration to work.
   - It cannot replicate objects with SSE-C because AWS does not have the keys
 necessary.
 - Source bucket owner needs permissions to objects. If you grant cross-account
-access to a bucket. It is possible the source bucket account will not own
+access to a bucket and the other accounts add objects to a bucket in the source account then it is possible the source bucket account will not own
 some of those objects.
 - Will not replicate system events, glacier, or glacier deep archive.
 - No deletes are replicated.
 
-#### Why use replication
+#### Why use replication(Reasons to use Replications)
 
-SRR - Log Aggregation
-SRR - Sync production and test accounts
-SRR - Resilience with strict sovereignty requirements
-CRR - Global resilience improvements
-CRR - Latency reduction
+SRR - Log Aggregation(if you have multiple diffent s3 buckets and you are storing logs from multiple different systems, you could use "Replication" to aggregate all those logs to single s3 bucket)
+SRR - Maybe to Sync production and test accounts(means to replicate data from test account to production account)
+SRR - Resilience with strict sovereignty requirements(maybe there are companies which can not have data leaving a specific aws region because of sovereignty requirements.So you can have Same Region Replication replicating between different buckets in different accounts. So by having a single account a security team can replicate all data from all accounts in single bucket into their single account for their purpose.)
+CRR - Global resilience improvements(means you can replicate your data into different regions to reduce latency, so customers in that remote region can access the bucket closest to them.)
+CRR - Latency reduction.(to reduce latency)
 
 ### S3 Presigned URL
 

@@ -1246,7 +1246,7 @@ S3 Accelerated Transfer
 
 - Off by default.
 - Uses the network of AWS edge locations to speed up transfer.
-- Bucket name cannot contain periods.
+- Bucket name cannot contain periods. (.) <- period = dot
 - Name must be DNS compatible.
 - Benefits improve the larger the location and distance.
   - The worse the start, the better the performance benefits.

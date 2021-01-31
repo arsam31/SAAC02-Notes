@@ -1,9 +1,4 @@
-# SAA-C02 Notes
-> These notes are the property of [ALOZANO](https://github.com/alozano-77) from Adrian Cantrill's (SAA-C02) course.
-Learning Aids from
-[aws-sa-associate-saac02](https://github.com/acantril/aws-sa-associate-saac02).
-There may be errors, so please purchase his course to get the original content
-and show support <https://learn.cantrill.io.>
+
 
 ## Table of Contents
 

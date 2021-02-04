@@ -2265,7 +2265,7 @@ Tenancy:
   In simple words, only your instances run on the host (no sharing) but the host isn't yours, you just dont share it.But you pay some little extra charges for the instances.
   
 - **Dedicated host** - Instances are run on a physical server fully dedicated for your use.
-  You pay for host, its all yours.no instance charges at all.
+  You pay for host, its all yours.no instance charges at all.You can launch instances from your different accounts.
 
 - AZ resilient service. They run within only one AZ system.
   - You can't access them cross zone.

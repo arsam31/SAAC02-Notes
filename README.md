@@ -2262,7 +2262,7 @@ Tenancy:
 - **Dedicated** - Instances are run on hardware that's dedicates to a single customer.
   Dedicated instances may share hardware with other instances from the same AWS account
   that are not Dedicated instances.
-  In simple words, only your instances run on the host (no sharing) but the host isn't yours, you just dont share it.
+  In simple words, only your instances run on the host (no sharing) but the host isn't yours, you just dont share it.But some little extra charges for the instances.
   
 - **Dedicated host** - Instances are run on a physical server fully dedicated for your use.
   You pay for host, its all yours.no instance charges at all.

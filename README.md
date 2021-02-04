@@ -2282,6 +2282,13 @@ within the same AZ.
   - Storage networking
   - Data networking
 
+Architecture And Resilience
+
+- EC2 hosts are in the AZ not in the subnet.
+- EC2 instances are in the subnets.
+- ENI(elastic network interfaces) are within the subnet and Primary ENI is mapped to the physical hardware on the EC2 host.
+- EBS exists within AZ
+
 EC2 Networking (ENI)
 
 When instances are provisioned within a specific subnet within a VPC

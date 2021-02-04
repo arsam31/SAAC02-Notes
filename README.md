@@ -2262,8 +2262,10 @@ Tenancy:
 - **Dedicated** - Instances are run on hardware that's dedicates to a single customer.
   Dedicated instances may share hardware with other instances from the same AWS account
   that are not Dedicated instances.
+  In simple words, only your instances run on the host (no sharing) but the host isn't yours, you just dont share it.
+  
 - **Dedicated host** - Instances are run on a physical server fully dedicated for your use.
-  Pay for entire host, don't pay for instances.
+  You pay for host, its all yours.no instance charges at all.
 
 - AZ resilient service. They run within only one AZ system.
   - You can't access them cross zone.

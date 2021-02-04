@@ -4709,6 +4709,13 @@ NAT, only outbound only.
 - To configure the Egress-only gateway, you must add default IPv6 route `::/0`
 added to RT with `eigw-id` as target.
 
+
+- In simple terms let's say:- 
+- instance A is accessing netflix . this is outbound.
+- netflix sending that data back which the instance A requested. this is response
+- netflix initiating a connection to instance A. this is inbound
+- SO an egress only internet gateway allows only OUTBOUND and response. it doesn't allow INBOUND
+
 ### VPC Endpoints (Gateway)
 
 Allow a private only resource inside a VPC or any resource inside a private

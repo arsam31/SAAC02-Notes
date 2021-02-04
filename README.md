@@ -2428,13 +2428,21 @@ Can only be attached to one EC2 instance at a time.
 #### General Purpose SSD (gp3)
 
 gp3 is newer version
+
 when you create a gp2 volume,it is created with a IO credit allocation
+
 gp3 starts with 3000 IOPS per second
+
 vloume range from 1TB to 16TB
+
 currently it is 20% cheaper than gp2
+
 if you intend to use upto 3000 IOPS, use gp3
+
 if you need more performance, you can get 16000 IOPS and 1000 MB by paying extra fee
+
 with gp3 we get higher max throughput of 1000 mb per second but in gp2 we get max 250mb per second
+
 we can swap from gp2 to gp3 but anything above 3000 IOPS the performance does not get added automatically like gp2, which scales on size
 
 #### Provisioned IOPS SSD (io1)

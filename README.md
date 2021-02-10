@@ -2425,6 +2425,13 @@ This is the **baseline performance**
 Default for boot volumes and should be the default for data volumes.
 Can only be attached to one EC2 instance at a time.
 
+
+In simple words If I have a volume of of 4TB. it means I have 4000GB. so I will get 12000 IOPS because as we know we get 3 IOPS per GB.
+For a volume with 5,333.33 GB of size you get the maximum iops of 16000. anything beyond this size, and you are capped at the max iops.
+It means if we have a volume with 6,666.66 GB of size we will still get the maximum iops of 16000. Not more than 16000.
+The baseline performance is this 3 IOPS per GB.It means the minimum iops i will get is 3.. not less than 3.
+There is a 5.4 million IO credits for the volume. Suppose a 100 GB volume gives you 300 IOPS as baseline performance.for gp2 you can go beyond the baseline performance with bursting... so for short periods of time... it's not a sustained(continuous) burst.so let's say you put a heavy load on you volume, and it consumes 500 IOPS... since you baseline performance is 300 IOPS you are going 200 IOPS beyond your baseline.those extra 200 IOPS are being taken from this 5.4 million IOPS credit pool
+
 #### General Purpose SSD (gp3)
 
 gp3 is newer version

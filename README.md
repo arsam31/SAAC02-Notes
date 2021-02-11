@@ -2289,6 +2289,7 @@ Architecture And Resilience
 - ENI(elastic network interfaces) are within the subnet and Primary ENI is mapped to the physical hardware on the EC2 host.
 - EBS exists within AZ
 - There is a feature called multi attach which allow SOME volumes to attach with multiple instances
+- Subnets are not physical, they are all just virtual networking.
 
 EC2 Networking (ENI)
 

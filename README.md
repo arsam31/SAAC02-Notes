@@ -2476,7 +2476,7 @@ Multi-attach allows them to attach to multiple EC2 instances at once.
 
 - great value
 - great for high throughput vs IOPs
-- 500 GiB - 16 TiB
+- 125 GiB - 16 TiB
 - Neither can be used for EC2 boot volumes.
 - Good for streaming data on a hard disk.
   - Media conversion with large amounts of storage.

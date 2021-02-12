@@ -2917,6 +2917,7 @@ Images contain read only layers, images are layer onto images.
 
 Docker container is the same as a Docker image, except it
 has an additional READ/WRITE layer of the container.
+Docker container is just a running copy of docker image.
 
 If you have lots of containers with very similar base
 structures, they will share the parts that overlap.

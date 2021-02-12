@@ -2932,6 +2932,10 @@ in the container registry.
 Docker hosts can run many containers based on one or more images.
 A single image can generate Containers on many different Docker hosts.
 
+Flow: statements are taken from DockerFile and placed as a filesystem layer in docker
+image. Then we place this docker image in docker hub. Then this image is
+taken from hub and placed on servers as a docker container(which is a running state of docker image)
+
 #### Container Key Concepts
 
 - Docker files are used to build Docker images

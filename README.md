@@ -3106,6 +3106,10 @@ This includes the time for EC2 to configure the instance and any software
 downloads that are needed for the user.
 When looking at an AMI, this can be measured in minutes.
 
+We can minimize the time to make the instance a service by Bootstrapping(automation)
+
+We can also minimize the time to make the instance a service by AMI baking
+
 AMI baking will front load the time needed by configuring as much as possible.
 
 ### AWS::CloudFormation::Init

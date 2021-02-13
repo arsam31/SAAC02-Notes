@@ -3108,9 +3108,11 @@ When looking at an AMI, this can be measured in minutes.
 
 We can minimize the time to make the instance a service by Bootstrapping(automation)
 
-We can also minimize the time to make the instance a service by AMI baking
+We can also minimize the time to make the instance a service by AMI baking but this will remove the post launch time(it means you can not be flexible with the configuration)
 
 AMI baking will front load the time needed by configuring as much as possible.
+
+The best way is to use both Bootstraping and AMI baking.
 
 ### AWS::CloudFormation::Init
 

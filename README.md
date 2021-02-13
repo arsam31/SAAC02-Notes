@@ -2955,7 +2955,7 @@ taken from hub and placed on servers as a docker container(which is actually a r
 - Container images will be located on a registry.
   - AWS provides ECR (elastic container registry)
   - Dockerhub can be used as well.
-- **Container definition** gives ECS just enough info about the single container.
+- **Container definition** gives ECS just information about where the container image is.
   - A pointer to which image to use and the ports that will be exposed.
 - **Task definitions** store the resources used by the task.
   - Stores **task role**, an IAM role that allows the task access to other

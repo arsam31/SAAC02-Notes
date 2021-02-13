@@ -1320,6 +1320,12 @@ parties know how the data will be hidden.
   - Some features are compliant with Level 3.
   - All features are compliant with Level 2.
 
+
+## What is Master Key in CMK?
+
+- If you talk about symmetric key, then the Master Key is the private key (and contains no public key).  If you talk about asymmetric key, then the Master Key contains both the Public and the Private keys.
+
+
 #### CMKs - Customer Master Keys
 
 - Managed by KMS and used within cryptographic operations.

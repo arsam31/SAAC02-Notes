@@ -2956,14 +2956,23 @@ taken from hub and placed on servers as a docker container(which is actually a r
   - AWS provides ECR (elastic container registry)
   - Dockerhub can be used as well.
 - **Container definition** gives ECS just information about where the container image is.
-  - A pointer to which image to use and the ports that will be exposed.
-- **Task definitions** store the resources used by the task.
+  - It tells ECS which port your single container use or which ports that will be exposed.
+- **Task definitions** represent complete application as multiple containers and it store the resources(CPU,memory etc) used by the task.
   - Stores **task role**, an IAM role that allows the task access to other
-  AWS resources.
+  AWS resources or services.
 - Task is not by itself highly available.
 
 ECS **Service** is configured via Service Definition and represents
 how many copies of a task you want to run for scaling and HA.
+
+Actually it's tasks or services that you deploy into ECS cluster and this applies equally wheather it's EC2-based or fargate-based.
+
+Imp points:
+
+- Container definition: It tells about images and ports.
+- Task definition: It defines single container or single container definations, OR multiple container or multiple container definitions, and task roles.
+- Task role: IAM role which the task assume. SO a task role can be used by any containers running as a part of task.
+- Services: It tells how many copies, High Availability of a task.
 
 ### ECS Cluster Types
 
@@ -2971,13 +2980,17 @@ ECS Cluster manages:
 
 - Scheduling and Orchestration
 - Cluster manager
-- Placement engine
+- Placement engine : where to run containers(which host)
+
+- The above 3 componenet exists in both mode EC2 mode and Fargate mode.
 
 #### EC2 mode
 
 ECS cluster is created within a VPC. It benefits from the multiple AZs that
 are within that VPC.
-You specify an initial size which will drive an **auto scaling group**.
+In EC2 mode, EC2 is used to run containers.When we create cluster we tell initial size which control number of container instances and this is handled by an **auto scaling group**.
+
+When these are provisioned, you will be paying for them regardless of what container you have been running on them.
 
 ECS using EC2 mode is not a serverless solution, you need to worry about
 capacity for your cluster.
@@ -2986,9 +2999,13 @@ The container instances are not delivered as a managed service, they
 are managed as normal EC2 instances.
 You can use spot pricing or prepaid EC2 servers.
 
+Imp: If you are not running any task or services on your EC2 Container hosts, you are still paying for them while they are in a running state.
+
 #### Fargate mode
 
 Removes more of the management overhead from ECS, no need to manage EC2.
+
+We still use Scheduling and Orchestration,Cluster Manager,Placement Engine,Registry,Container definition,Task roles and Services.
 
 **Fargate shared infrastructure** allows all customers
 to access from the same pool of resources.
@@ -2999,7 +3016,8 @@ For ECS tasks, they are injected into the VPC. Each task is given an
 elastic network interface which has an IP address within the VPC. They then
 run like a VPC resource.
 
-You only pay for the container resources you use.
+In Fargate mode, because tasks and services are running from shared infrastructure platform, you only pay for the containers you are using.
+
 
 #### EC2 vs ECS(EC2) vs Fargate
 
@@ -3010,9 +3028,12 @@ This allows for spot pricing and prepayment.
 
 **Fargate** is great if you,
 
-- Have a large workload but are overhead conscious.
+- Have a large workload but are overhead conscious but NOT price concious.
 - Have small or burst style workloads.
 - Use batch or periodic workloads.
+
+
+Fargate means you only pay for what you consume, EC2 mode means paying for the container instances even when you do not use them.
 
 ---
 

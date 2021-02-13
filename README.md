@@ -2929,6 +2929,9 @@ If you have lots of containers with very similar base
 structures, they will share the parts that overlap.
 The other layers are reused between containers.
 
+The last layer which is the I/O layer is never shared
+but all other layers could be shared among the containers
+
 #### Container Registry
 
 Registry or hub of container images.
@@ -3118,13 +3121,16 @@ If you have an application with 90% installation and 10% configuration, then you
 
 ### AWS::CloudFormation::Init
 
+It is a way that you can pass complex bootstrapping instructions into an EC2 instance.It is much more complex than simple EC2 user data.
+
 **cfn-init** is a helper script installed on EC2 OS.
 This is a simple configuration management system.
 
 - User Data is procedural and run by the OS line by line.
-- cfn-init can be procedural, but can also be desired state.
-  - Can specify particular versions of packages. It will ensure things are
-  configured to that end state.
+- cfn-init can be procedural, but can also be desired state.(desired state means how you want something to be)
+  - For example you can specify particular versions of apache server to be installed,
+    if that version is already installed then do nothing.If another version is istallled then
+    update it to the desired virsion.
   - Can manipulate OS groups and users.
   - Can download sources and extract them using authentication.
 
@@ -3173,7 +3179,9 @@ When IAM roles are assumed, you are provided temporary roles based on the
 permission assigned to that role. These credentials are passed through
 instance **meta-data**.
 
-EC2 and the secure token service ensure the credentials never expire.
+EC2 and the secure token service talks to each other continuously to ensure the credentials never expire.
+
+So the application inside the EC2 instance keep checking the meta data, it will never be in a position where it has expired credentials.
 
 Key facts
 
@@ -3181,7 +3189,7 @@ Key facts
   - iam/security-credentials/role-name
   - automatically rotated - always valid
   - Resources need to check the meta-data periodically
-- Should always use roles compared to storing long term credentials
+- Important: Should always use roles compared to storing long term credentials
 - CLI tools use role credentials automatically
 
 ### AWS System Manager Parameter Store

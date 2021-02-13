@@ -3053,9 +3053,11 @@ This could perform some software installs and post install configs.
 Bootstrapping is done using **user data** and is injected into the instance
 in the same way that meta-data is. It is accessed using the meta-data IP.
 
-<http://169.254.169.254/latest/>
+<http://169.254.169.254/latest/user-data>
 
-Anything you pass in is executed by the instance OS only once on launch!
+Anything you pass in is executed by the instance OS **only once on launch**!
+
+If you update a user data and restart the instanc, it will still **not executed**. it execute only once.
 
 EC2 doesn't validate the user data. You can tell EC2 to pass in trash data
 and the data will be injected. The OS needs to understand the user data.

@@ -3114,6 +3114,8 @@ AMI baking will front load the time needed by configuring as much as possible.
 
 The best way is to use both Bootstraping and AMI baking.
 
+If you have an application with 90% installation and 10% configuration, then you must use AMI baking for installation and Bootstrapping for configuration.This way you reduce the post launch time and thus boot-time-to-service-time.
+
 ### AWS::CloudFormation::Init
 
 **cfn-init** is a helper script installed on EC2 OS.

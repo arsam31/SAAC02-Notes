@@ -3347,7 +3347,7 @@ interface card.
 There is no charge for this and is available on most EC2 types.
 It allows for higher IO and lower host CPU usage
 This provides more bandwidth and higher packet per seconds.
-In general this provides lower latency.
+In general this provides consistant lower latency.
 
 #### EBS Optimized
 

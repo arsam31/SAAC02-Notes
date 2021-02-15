@@ -3334,6 +3334,7 @@ matching host size.
 - Amazon RDS instances are not supported
 - Placement groups are not supported for dedicated hosts.
 - Hosts can be shared with other organization accounts using **RAM**
+- You can only see the instances(created by other accounts you shared the host with) but can not control them.
 - This is mostly used for licensing problems related to ports.
 
 ### Enhanced Networking

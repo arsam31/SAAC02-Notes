@@ -1742,6 +1742,13 @@ S3 and Glacier select lets you use SQL-like statements to select part of the
 object which is returned in a filtered way.
 The filtering happens at the S3 service itself saving time and data.
 
+### S3 Events
+
+When S3 event is enabled,a notification is generated when a certain thing occurs within a bucket.
+and then can be delievered to different destinations like SNS,SQS and Lambda function.
+
+You can generate event notification when objects are created, copied, on delete adds a deleteMarker, and when long multi-part upload operation completes, do something.
+
 ---
 
 ## Virtual-Private-Cloud-VPC

@@ -3216,8 +3216,9 @@ Parameter Store:
 - Allows for hierarchies and versioning.
 - Can store plaintext and ciphertext.
   - This integrates with **kms** to encrypt passwords.
-- Allows for public parameters such as the latest AMI parameter to be stored
-and referenced for EC2 creating.
+- Parameters that we create are private. Public Parameters are accessible to everyone and they are managed by AWS.
+  Allows for public parameters such as the latest AMI parameter to be stored
+and referenced for EC2 creating. 
 - Is a public service so any services needs access to the public sphere or
 to be an AWS public service.
 - Applications, EC2 instances, lambda functions can all request access to

@@ -2,8 +2,7 @@
 
 ## Table of Contents
 
-- [Cloud-Computing-Fundamentals](#Cloud-Computing-Fundamentals)![image](https://user-images.githubusercontent.com/29680493/115471511-87d70b00-a251-11eb-9e7a-30366d5cf303.png)
-
+- [Cloud-Computing-Fundamentals](#Cloud-Computing-Fundamentals)
 - [AWS-Fundamentals](#AWS-Fundamentals)
 - [IAM-Accounts-AWS-Organizations](#IAM-Accounts-AWS-Organizations)
 - [Simple-Storage-Service-S3](#Simple-Storage-Service-S3)
@@ -3789,7 +3788,7 @@ Read Replicas provide near 0 RPO
   - In this case you must default back to snapshots and backups.
 - Promotion cannot be reversed. (means when a read replica become read-write replica. this is NOT reversible process. you have to delete it and create a new read-replica)
 
-Imp for exam : Read Replicas provide read scaling for RDS instance while Multi AZ in RDS only provide high availability(not fault tolerance)
+Imp for exam : Read Replicas provide read scaling for RDS instance NOT write scaling. while Multi AZ in RDS instance only provide high availability(not fault tolerance)
 
 ### Amazon Aurora
 

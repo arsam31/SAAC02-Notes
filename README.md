@@ -3758,6 +3758,8 @@ desired point in time.
 
 Kept in sync using **asynchronous replication**
 
+Imp for exam : async replication means read replicas while synchronous replication means Multi AZ. 
+
 It is written fully to the primary and standby instance first.
 Once its stored on disk, it is then pushed to the replica.
 This means there could be a small lag.

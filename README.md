@@ -3772,7 +3772,7 @@ encryption, configuration, and networking without intervention.
 READ performance
 
 - 5 direct read-replicas per DB instance.
-- Each of these provides an additional instance of read performance.
+- Each of these provides an additional instance of read performance.(means you can use primary instance for write and use replicas for Reads. This will improve the performance)
 - This allows you to scale out read operations for an instance.
 - Read-replicas can chain, but lag will become a problem.
 - Can provide global performance improvements.

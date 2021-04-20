@@ -3709,7 +3709,7 @@ RPO - Recovery Point Objective
 - Amount of maximum data loss.
 - Influences technical solution and cost.
 - Business usually provides an RPO value.
-- The lower the RPO value, the more snapshots will be taken in a short time(may be in minutes or seconds)
+- The more snapshots you perform the lower the RPO value
 
 RTO - Recovery Time Objective
 

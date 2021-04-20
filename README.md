@@ -3726,7 +3726,7 @@ between the compute resource and the storage. If you are using single AZ, this
 can impact your application. If you are using Multi-AZ, the snapshot occurs
 on the standby replica.
 
-Manual snapshots don't expire, you have to clean them yourself.
+Imp or Exam : Manual snapshots don't expire, you have to clean them yourself.
 Automatic Snapshots can be configured to make things easier.
 
 In addition to automated backup, every 5 minutes database transaction logs are

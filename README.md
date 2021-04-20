@@ -3784,7 +3784,7 @@ Read Replicas provide near 0 RPO
 - If the primary instance fails, you can promote a read-replica to take over.
 - Once it is promoted, it allows for read and write.
 - Only works for failures.
-  - Read-replicas will replicate data corruption.
+  - Read-replicas will replicate data corruption. (means if data is curropted by a malware it will still be replicated to other Read Replicas)
   - In this case you must default back to snapshots and backups.
 - Promotion cannot be reversed.
 

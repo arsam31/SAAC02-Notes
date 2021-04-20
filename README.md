@@ -3786,7 +3786,7 @@ Read Replicas provide near 0 RPO
 - Only works for failures.
   - Read-replicas will replicate data corruption. (means if data is curropted by a malware it will still be replicated to other Read Replicas)
   - In this case you must default back to snapshots and backups.
-- Promotion cannot be reversed.
+- Promotion cannot be reversed. (means when a read replica become read-write replica. this is NOT reversible process. you have to delete it and create a new read-replica)
 
 ### Amazon Aurora
 

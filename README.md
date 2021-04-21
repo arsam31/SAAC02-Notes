@@ -3833,7 +3833,7 @@ it doesn't have to make any storage modifications.
   - No way to select magnetic storage.
 - Aurora cluster does not specify the amount of storage needed.
   - This is based on what is consumed.
-- High water mark billing or billed for the most used.
+- High water mark billing or billed for the most used. (this water mark no longer exist, but still keep it in mind)
   - Storage which is freed up can be re-used.
   - If you reduce a lot of storage, you will need to create a brand new
   cluster and migrate data from the old cluster to the new cluster.

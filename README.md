@@ -3810,7 +3810,7 @@ Aurora cluster functions across a number of availability zones.
 There is a primary instance and a number of replicas.
 The read applications from applications can use the replicas.
 
-There is a shared storage of **max 64 TiB** across all replicas.
+There is a shared storage of **max 128 TiB** across all replicas.
 This uses 6 copies across AZs.
 
 All instances have access to these storage nodes. This replication

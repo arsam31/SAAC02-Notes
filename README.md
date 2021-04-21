@@ -3862,8 +3862,7 @@ Minimum endpoints
 - Aurora doesn't support micro instances
 - Beyond RDS singleAZ (micro) Aurora provides best value.
 - Compute is billed per second with a 10 minute minimum.
-- Storage is billed using the high watermark for the lifetime using GB-Month.
-  - Additional IO cost per request made to the cluster shared storage.
+- Storage is billed GB per month and IO cost per request.
 - 100% DB size in backups are included for free.
   - 100 GB cluster will have 100 GB of storage for backups.
 

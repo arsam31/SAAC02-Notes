@@ -3928,7 +3928,7 @@ layer and typically occurs within one second.
   - Low latency performance improvements for international customers.
 - The application can perform read operations against the read replicas.
 - There is ~1s or less replication between regions.
-- It is one way replication.
+- It is one way replication.(only fro primary to secondary)
 - No additional CPU usage is needed, it happens on the storage layer.
 - Secondary regions can have 16 replicas.
   - All can be promoted to Read or Write in a DR situation.

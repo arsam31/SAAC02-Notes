@@ -4052,7 +4052,7 @@ Without load balancing, this could bring additional problems.
 - The servers can end up with uneven load.
   - Some requests take more CPU than others.
 - Failed instances will still show up in DNS cache.
-  - Due to TTL values, a user can be directed toward a dead server.
+  - Due to TTL values, a user can be directed toward a dead server.(even if we use Route53 healthChecks, the server is removed but this is not ideal for user experience. If servers are added and removed frequently,based on the load on servers,updating the DNS is slow and chunky, and because of caching it's effects can be delayed. so we use Load Balancers)
 
 #### Load Balancers Architecture
 

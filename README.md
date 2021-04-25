@@ -4031,7 +4031,7 @@ You can use hybrid networking to connect to the same mount targets.
 - Two t-put modes:
   - Bursting works like GP2 volumes inside EBS with a burst pool.
   The more data you store in the FS, the better performance you get.
-  - Provisioned t-put modes can specify t-put requirements separately from size.
+  - Provisioned t-put modes can specify t-put requirements separately from size. (means you can control throughput independently from the size of the data)
 - Two storage classes available:
   - Standard
   - Infrequent access

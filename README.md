@@ -4186,7 +4186,7 @@ Dynamic Scaling
 
 - Simple: If CPU is above 50%, add one to capacity
 - Stepped: If CPU usage is above 50%, add one, if above 80% add three
-- Target: Desired aggregate CPU = 40%, ASG will achieve this
+- Target: Desired aggregate CPU = 40%, ASG will achieve this (means terminate or provision instance to stay at 40%)
 
 **Cooldown Period** is how long to wait at the end of a scaling action before
 scaling again. There is a minimum billable duration for an EC2 instance.

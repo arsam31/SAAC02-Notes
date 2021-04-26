@@ -4116,6 +4116,8 @@ LCU that you consume is based on the highest value for all of the
 individual measurements. You pay a certain number of LCUs based on your
 load over that hour.
 
+In Summary, load balancer has a listner configuration that controls exactly what ports and protocols it's listening out for. It has also host-based and path-based rules, which direct those incomming connections to different target groups. A target group is just a collection of targets. A target can be EC2, lambda , ECS containers etc
+
 #### Cross zone load balancing
 
 Each node that is part of the load balancer is able to distribute load

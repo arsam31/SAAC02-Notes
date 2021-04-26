@@ -4230,6 +4230,8 @@ that aren't HTTP or HTTPS.
 
 ### SSL Offload and Session Stickiness
 
+There are three ways that a load balancer can handle secure connections.
+
 #### Bridging - Default mode
 
 One or more clients makes one or more connections to a load balancer.

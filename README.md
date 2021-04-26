@@ -4204,7 +4204,7 @@ the status of HTTP and HTTPS requests. This makes them more application aware.
 - Always use cool downs to avoid rapid scaling.
 - Try and use more smaller instances to allow granularity.
 - You should use ALB with autoscaling groups.
-- ASG defines when and where, Launch Template defines what.
+- IMPORTANT: ASG defines when and where, Launch Template defines what. (when to add instance, where to add instance, what parameters to add)
 
 ### Network Load Balancer (NLB)
 

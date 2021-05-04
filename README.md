@@ -4662,7 +4662,7 @@ lots of devices or lots of applications.
 - Many producers send data into a Kinesis Stream.
 - The stream can scale from low to near infinite data rates.
 - Highly available public service by design.
-- Streams store a 24-hour moving window of data.
+- Streams store a 24-hour moving window of data. (window means persistant)
   - Can be increased to 7 days.
   - Data 24 hours + 1s is replaced by new data entering the stream.
 - Kinesis includes the storage costs within it for the amount of data

@@ -4710,7 +4710,7 @@ will fetch the item and cache it and deliver it locally.
 - This provides lower latency and higher throughput for customers.
 - Can handle static and dynamic content.
 - **Origin** the original location of your content, can be an S3 bucket or LB.
-- **Distribution** the configuration unit of CloudFront.
+- **Distribution** the configuration unit of CloudFront. (Almost everything we configure in cloudfront is configured on cloudfront distribution)
 - **Edge locations** global infrastructure which hosts a cache of your data.
   - There are over 200 edge locations.
   - They can be one or more racks in a third party server system.

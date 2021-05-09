@@ -4802,7 +4802,7 @@ more internet based hops and this means a lower quality connection.
 - The packet will always have source, then destination, then response.
 
 ### Egress-Only Internet Gateway
-
+- It's an internet gateway which only allow connections initiated from inside a VPC to outside.
 - IPv4 addresses are private or public
 - NAT allows private IPs to access public networks and receive responses.
 - NAT will not allow externally initiated connections IN.

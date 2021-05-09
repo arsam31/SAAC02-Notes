@@ -4792,8 +4792,8 @@ more internet based hops and this means a lower quality connection.
   - Packet size
   - Anything which could be observed from the outside of the packet.
 - Capture data at various different monitoring points.
-  - VPC: all interfaces in that vpc
-  - Subnets: interfaces in that subnet
+  - VPC: monitors all interfaces in that vpc
+  - Subnets: monitors interfaces in that subnet
   - Interface directly
 - VPC flow logs are not realtime
 - Destination can be S3 or CloudWatch logs

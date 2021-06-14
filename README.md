@@ -5005,6 +5005,7 @@ is required.
 - Can share between accounts using AWS RAM
 
 ### Storage Gateway
+- When you think of storage gateway, think of extension, migration and backups.
 
 - Hybrid Storage Virtual Application (On-premise)
   - Can be run inside AWS as part of certain disaster recovery scenarios

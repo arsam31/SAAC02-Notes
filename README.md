@@ -5138,7 +5138,7 @@ windows filesystem or Directory Services.
 
 #### Words to look for
 
-- VSS: User Driven Restores
+- VSS: User Driven Restores (it is window feature that allow user to perform file and folder level restore)
 - Native File System (NFS) accessible over SMB
 - Windows permissions model
 - Product supports DFS, scale out file share.

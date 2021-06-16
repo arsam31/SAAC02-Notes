@@ -5263,6 +5263,8 @@ is much more efficient to do these encryption processes.
 - Can protect the private keys an issuing certificate authority.
 - Anything that needs to interact with non AWS products.
 
+For the exam: The overall theme is that for anything which is not specific to aws, so anything which expects to have access to hardware security module using industry standard APIs, then the ideal product for that is cloudHSM.For anything that uses standards,for anything that has to integrate with products,which are not aws, then cloud HSM is ideal
+
 ---
 
 ## NoSQL-and-DynamoDB

@@ -5213,6 +5213,8 @@ already.
 
 Layer 7 filtering is only provided by WAF.
 
+For the exam: link the keyword DDOS with shield, and link the terms Layer7 filtering,http filtering, https filtering with WAF. For WAF, that product can be linked to cloudfront,api gateway and application load balancer.
+
 ### CloudHSM
 
 KMS is the key management service within AWS. It is used for encryption within

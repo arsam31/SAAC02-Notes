@@ -5422,7 +5422,9 @@ If you can tolerate the cost savings you can scale better.
 ### DynamoDB Streams and Triggers
 
 DynamoDB stream is a time ordered list of changes to items in a DynamoDB
-table. A stream is a 24 hour rolling window of the changes.
+table. means everytime a change occurs to an item in a table, a change is recorded in a dynamodb stream.
+
+A stream is a 24 hour rolling window of the changes.
 It uses Kinesis streams on the backend.
 
 This is enabled on a per table basis. This records

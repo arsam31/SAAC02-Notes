@@ -5349,7 +5349,7 @@ Every operation consumes at least 1 RCU/WCU
 1 RCU = 1 x 4KB read operation per second. This rounds up.
 1 WCU = 1 x 1KB write operation per second.
 
-Every single table has a WCU and RCU burst pool. This is 500 seconds
+Every single table has a WCU and RCU burst pool. This is 300 seconds
 of RCU or WCU as set by the table.
 
 #### Query

@@ -3588,6 +3588,40 @@ We might want to store the start date of any employment relationship.
 Can store massive amounts of complex relationships between data or between
 nodes in a database.
 
+
+### Acid vs Base
+
+There is a computer science theeorem CAP theorem CAP stands for Consistency, Availability, Partition Tolerant
+
+Consistency means: Every read to a database will receive most recent write or it will get an error.
+
+Availability means: Every request will receive a non error response but without the gurrenttee that it contains the most recent write
+
+Partition Tolerant means: Systems can be made of multiple network partitions, and the system continues to operate even if there are number of dropped messages or errors between these network nodes.
+
+ACID : focuses on consistency
+
+BASE : focuses on availability
+
+It means if you have a database which consist of multiple nodes and a network is also involved, then you generally have a choice to provide either consistency or availability.
+
+ACID means transactions are atomic, transactions are consistent, transactions are isolated, transactions are durable.
+
+Exam realted: If you see ACID mentioned then it is related to RDS databases. These are generally acid based and acid limits the ability of a database to scale.
+
+Exam realted: If you see BASE mentioned then it is related to NOsql database.
+
+Exam realted: If you see ACID mentioned with DynamoDb or NoSQL, it might be reffering to DynamoDb transactions.
+
+Atomic means all component will successful or no component will successful. For example if we want to transfer 100 rupee to another account.there are two parts in it. 100 ruppe will be deducted from our account and 100 ruppee will be added to the others account. there can never be a situation where 100 rupee will be deducted from our account and not added to the other's account.
+
+Durable means once the transaction is comitted,it will remain comitted even if the system fails. The data is stored somewhere,even the system restarted, power failure, data will not be lose, it's durable
+
+SEE DIAGRAMS
+
+
+
+
 ### Databases on EC2
 
 It is always a bad idea to do this.

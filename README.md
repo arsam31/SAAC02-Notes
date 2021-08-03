@@ -4976,6 +4976,7 @@ To make entire architecture HAvailable, please see the diagram.
 
 
 
+## SITE-TO-SITE VPN
 
 - A logical connection between a VPC and on-premise network encrypted in transit
 using IPSec, running over the public internet.

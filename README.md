@@ -4924,6 +4924,59 @@ VPC Peering Connections CANNOT be created with overlapping VPC CIDRs.
 
 ### AWS Site-to-Site VPN
 
+
+
+
+A site to site vpn is a logical connection between VPC and on premises network. and this connection is encrypted in transit using IPSec, which is important because it runs over public internet. Assume VPN is running over the public internet.
+
+few components are involved in creating a vpn connection.
+
+first we have a vpc,second we have virtual private gateway,it is a logical gateway and can be target on a route table. VPG is something that we create and associate with a single VPC and it is the target on one or more route tables.
+
+Third we have customer gateway or CGW, this refers to two different things. it refers to both logical piece of configuration within aws and the things that the configuration represents, a physical on premises router, which the vpn connects to.
+
+so when you see cgw mentioned, it's either the logical configuration in aws or it is a physical device that this logical configuration represents.
+
+and the last component is vpn connection itself, which stores the configuration and it's linked to virtual private gateway.
+
+this is how we create a network connection between two locations.
+
+open diagram to understand the arhitecture: on left we have a vpc with 3 subnets in different AZ, next we have aws public zone where aws public services operate from, the public internet directly connected to that. finally we have on premises office with IP range.
+
+now step one for creating vpn connection is to gather all the required information.
+
+we need IP address range of the vpc that will be connecting to the on premises network. we also need IP address range of the on premises network and the IP address of the physical router on the customer premises
+
+once we have all this information then we can create a virtual private gateway and attach it to animal for life VPC.
+
+virtual private gateway is a logical gateway wihin aws so it can be a target of routes .
+
+now in our onpremises environment we have customer premises router and this will have external IP address, and for this router we create a customer gateway object within aws.This is a logical configuration entity that represents this physical device on our customer premises. In this case we need to define public IP address so that the logical cgw entity matches the physical router.
+
+Behind the scenes vpg is a highly available gateway object. and it has a physical endpoints. these endpoints are devices in different AZ each with IPv4 addresses. this means that virtual private gateway is fully highly available by design. but keep in mind that this does not mean that whole thing is highly available
+
+The next step is that we need to create a VPN connection inside aws and there are different types of vpn connections.there are static and dynamic connections
+
+we will implement static connection
+
+Now when creating a vpn connection, you need to link it to a virtual private gateway.it means that it can use the endpoints which that virtual private gateway provides.
+
+You also need to specify a customer gateway to use and when you do 2 vpn tunnels are created.One between each endpoint and the physical onpremises router.
+
+A vpn tunnel is an encrypted channel through which data can flow between vpc and onpremises. as long as at least one tunnel is active,then two networks are connected.
+
+SO in this case we have got one vpn connection that is using two endpoints of the vpg and both of these are connected back to our customer gateway.so we have parially highly available design.if one AZ fail the other will continue functioning so at least one of these tunnel is active.
+
+Now because it is static vpn it means that we have to statically configure the vpn connection with IP addressing information so we have to tell the aws side both the network range that is in use within the onpremises network and we have to configure the onpremises side so that it knows the IP address range that the aws side use
+
+and this means that the traffic can flow from the vpc via the vpc router through the virtual private gateway over the tunnel to the onpremises network and back again. This whole is not fully highly available because if onpremises fail, everything will fail.even the aws side is highly available. at the aws side there are two tunnels to separate the hardware but this does not matter if the onpremises fails.
+
+To make entire architecture HAvailable, please see the diagram.
+
+
+
+
+
 - A logical connection between a VPC and on-premise network encrypted in transit
 using IPSec, running over the public internet.
 - This can be fully Highly Available if you design it correctly

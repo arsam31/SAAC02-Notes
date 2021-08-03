@@ -5002,6 +5002,45 @@ using IPSec, running over the public internet.
 
 ### AWS Direct Connect (DX)
 
+
+A direct connect is actually a 1GB per second or 10GB per second network port into aws's network
+
+It is not actually a connection but it is just a port operating at a certain speed which belongs to certain aws account.
+
+The port is allocated to you at a DX location, which is a major data center and these are located globally.
+
+Requirements are specific:
+
+If you use 1GBPS then it needs to use 1000BASE LX standard
+
+If yu use 10GBPS then it needs to use 10GBASE LR standard
+
+Both of these use single mode fiber optic cable
+
+When you apply for a DX port at a DX location, you also apply to connect your equipment to that aws port, and this is called cross-connect using data center terminology.It is a cable from the aws DX rack and DX port allocated to you and your customer router which is also located inside the DX location. Your router needs to be capable of using VLANS and it must support BGP.
+
+Now depending if your business is large, you can contact a national telco and get a physical cable from the DX location through to your on premises data center.
+
+If your business is small, instead of connecting your equipment directly into the DX port,you can connect a DX port into partner router who are generally themselves going to be a large telco and they will handle the connection between DX loacation and your on premises data center.
+
+Important thing to understand:: when you apply for a direct connect, what you are actually getting is a port and you need to arrange for that port to plug into somewhere in that DX location, and then if applicable,you need to arrange for that to be transited through to your business premises.
+
+So its not just getting the Direct Connect, its about arranging a physical extension of that fiber optic cable into your business onpremises.
+
+After getting everything done, on the top of this DX connection, you can run Virtual Interfaces (VIFs) and VIFS are simple virtual connections that run on the top of physical DX connections.
+
+So one physical connection can have multiple VIFS running over the top of it, and each of these VIFS is a VLAN and a BGP connection between your router and the aws DX router.
+
+Private VIFS are associated with a virtual private gateway and and connect into a single VPC and they are used to provide private network connectivity between a VPC and your onpremises network. And you can have many private VIFS running over the top of DX connection, and each VIF is connected to a single VPC.
+
+Public VIFS provide connectivity to aws public zone services (s3,dynamo db,sns,sqs)
+
+to understand the architecture , see the diagrams.
+
+
+
+## Direct Connect
+
 - Port operating at a certain speed which belongs to a certain AWS account.
 - Allocated at a DX location which is a major data center.
 - Two speeds

@@ -5272,6 +5272,63 @@ windows filesystem or Directory Services.
 - Managed service, no file server admin
 - Integrates with DS and your own directory.
 
+
+
+### FSX for luster
+
+In short FSx is windows native file system which is accessed over SMB. It is used for windows native environment within aws.
+
+FSX is managed implementation of luster file system which is a file system design specifically for high computing systems.
+
+It supports linux based instances running in aws. It also supports POSIX style permissions for file system.
+
+Luster is designed for use cases such as machine learning, big data etc(or any thing that need to process large amount of data).
+
+It can scale to 100's GB of throughput and also offers sub milliseconds latency and this is the level of performance you need for high performance computing across many different instances.
+
+FSX for luster can be provisioned using two different deployment types:
+
+If you need best performance short term workloads then you can pick scratch
+
+Scratch is optimized for really high end performance but it does not provide much resilience or high availability.
+
+If you need persistant or high availability for your workloads then you can choose the persistant option. It is great for longer term storage. It offers high availability but in one AZ only because it needs to deliever really high end performance. It also offers self healing.
+
+It is available over a VPN or Direct Connect from onpremises locations.
+
+It is accessable from within a VPC and anything connected to that vpc via private networking.
+
+ARCHITECTURE:-
+
+File system is where the data lives, where the processing occurs and analyzed by your applications. When you create a file system you can associate it with a repository (S3 bucket) . If you do this then the objects in the s3 bucket are visible in the file system but at this stage it is not actually stored with in the file system. When it is first accessed by any instance connected to the file system, the data is lazy loaded into the file system from s3 bucket and then it is present within the file system.
+
+Important to understand: when the objects are initially requested they are loaded from s3 to file system and then they stays in file system.
+
+There is not any buit in synchronization so file system is completely separate from s3 bucket.
+
+You can sync any change made into the file system back to s3 bucket using "hsm_archive" command
+
+Keep in mind luster file system is completely separate and is not automatically sync with s3 repository
+
+There are number of types of elements that are stored in file system
+
+1: Metadata(file names, timestamp and permissions). Metadata is stored on metadata targets known as MDTs
+
+2: The data itself is stored on multiple object storage targets knowns as OST and each of these is 1.17TIB in size
+
+3: The performance provided by the FSX luster is baseline performance based on size of the file system
+
+4: And the size of the file system starts minimum to 1.2TIB then increment to 2.4TIB
+
+5: For scratch deployment type, you get a baseline performance 200MB/s per TIB of storage
+
+6: For persistant storage type, there are 3 baseline performance levels.
+
+You offers 50MB/s , 100MB/s , 200MB/s per TIB of storage
+7: For both scratch and persistant, we can burst upto 1,300 MB/s per TIB and this is based on credit system. And you earn credit when you are using a performance level below your base line and you consume these credits when you burst above the base line
+
+To understand the architecture see the diagrams.
+
 ---
 
 ## Security-Deployment-Operations

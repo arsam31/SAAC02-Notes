@@ -5751,3 +5751,23 @@ This can be saved in the console or fed to other visualization tools.
 
 You can optimize the original data set to reduce the amount of space uses
 for the data and reduce the costs for querying that data.
+
+
+### Elastic Cache
+
+
+We are looking at catagram application which is running with in an auto scaling group with 3 EC2 instances and a load balancer and it is using aurora for the persistant data layer .
+
+Now we have a user for our application . And this application is fault tlerant extreme eddition so even if the components of the system fails the applicaiton will continue operating without distrupting the user.
+
+Now the way it does this is it use Elastic cache session data. This means when the user first connect with any of the instance , his session data is written by that instance into elastic cache and it is kept updated. If the application needs to deal with the failure of an instance anytime where previously the session data would be lost and the application functionality distrupted, the catagram extreme eddition can tolerate this.
+
+If this occur with catagram extreme eddition then user connection is moved to another instance by load balancer and user experience continued unintrupted because the session data is loaded by the new instance from elastic cache
+
+Now this is another usecase for elastic cache, storing usser session data externally to applicaiton instances alowing the application to be built in a stateless way which internal allows it to move towords fault tolerant application
+
+LAST POINT IN MEMCHACHE VS REDIS CACHE
+
+Mem chache does have an advantage is, it is multi threaded by design so it can take better advantage of multicore cpu, it can offer significantly more in terms of performance when using multicore cpu
+
+Reids feature is transactions, in which you treat multiple operations as one, so either all of the operations work or not work at all. for other points see the diagram

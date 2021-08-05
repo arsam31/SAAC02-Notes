@@ -4730,6 +4730,16 @@ SQS
 - Allow for async communications
 - Once the message is processed, it is deleted
 
+
+
+### Amazon Cognito
+
+Cognito provides authentication, authorization and user management for web and mobile apps
+Cognito provides two main features of functionality
+User Pool: A user pool is a user directory in Amazon Cognito. With a user pool, your users can sign in to your web or mobile app through Amazon Cognito. Your users can also sign in through social identity providers like Google, Facebook, Amazon, or Apple. Whether your users sign in directly or through a third party, all members of the user pool have a directory profile that you can access through a Software Development Kit (SDK). When think of user pool, imagine a database of users,which can include external identities. They sign in and they get a JWT.We can not use these JWT's to access AWS resources. AWS credentials are required to access aws resources.
+Identity Pool: It enable you to create unique identities for your users and federate them with identity providers. With an identity pool, you can obtain temporary, limited- privilege AWS credentials to access other AWS services.
+See diagrams for more understanding.
+
 ---
 
 ## CDN-and-Optimization

@@ -3373,6 +3373,9 @@ Most new instances support this and have this enabled by default for no charge.
 
 ### Public Hosted Zones
 
+
+(Check other notes on other repository)
+
 A hosted zone is a DNS database for a given section of global DNS data.
 A public hosted zone is a type of R53 hosted zone which is hosted on
 R53 provided public DNS name servers. When creating a hosted zone, AWS provides

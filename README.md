@@ -650,9 +650,13 @@ If another client queries the same thing, they will get back a
 ### IAM Basics
 
 - IAM has three main jobs.
-- 1: Identity Provider(IDP): Helps you create, edit and delete identities such as Users, Roles.
-- 2: Authentication: Prove who you are you claim to be.
-- 3: Authorize: Allow and Deny access to resources.
+
+   - Authentication: IAM provides user authentication, which verifies the identity of users who are trying to access AWS resources. IAM uses various authentication        mechanisms, such as passwords, access keys, and multi-factor authentication, to verify user identities.
+
+   - Authorization: IAM provides user authorization, which determines what AWS resources users are allowed to access and what actions they are allowed to perform on        those resources. IAM allows you to create and manage policies that grant or deny permissions to AWS resources based on the principle of least privilege.
+
+   -  User management/Identity Provider(IDP): IAM provides user management, which allows you to create and manage IAM users, groups, and roles. IAM also provides user       access management, which allows you to grant and revoke user access to AWS resources based on their job roles or responsibilities.
+
 ### IAM Identity Policies
 
 Identity Policies are attached to AWS Identities which are

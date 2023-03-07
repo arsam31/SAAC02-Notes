@@ -646,6 +646,13 @@ If another client queries the same thing, they will get back a
 
 ## IAM-Accounts-AWS-Organizations
 
+
+### IAM Basics
+
+- IAM has three main jobs.
+- 1: Identity Provider(IDP): Helps you create, edit and delete identities such as Users, Roles.
+- 2: Authentication: Prove who you are you claim to be.
+- 3: Authorize: Allow and Deny access to resources.
 ### IAM Identity Policies
 
 Identity Policies are attached to AWS Identities which are

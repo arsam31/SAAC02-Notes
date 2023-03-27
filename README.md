@@ -657,6 +657,14 @@ If another client queries the same thing, they will get back a
 
    -  User management/Identity Provider(IDP): IAM provides user management, which allows you to create and manage IAM users, groups, and roles. IAM also provides user       access management, which allows you to grant and revoke user access to AWS resources based on their job roles or responsibilities.
 
+
+### IAM Identity Policies
+
+- An IAM user has 1 username and 1 password
+- An IAM user can have maximum two access keys.
+- Access keys can be created, deleted, made inactive or made active.
+When access keys are created they are logically bydefault in an active state.
+
 ### IAM Identity Policies
 
 Identity Policies are attached to AWS Identities which are

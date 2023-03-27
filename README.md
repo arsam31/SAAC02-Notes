@@ -664,6 +664,7 @@ If another client queries the same thing, they will get back a
 - An IAM user can have maximum two access keys.
 - Access keys can be created, deleted, made inactive or made active.
 When access keys are created they are logically bydefault in an active state.
+- Rotating access keys simply means create a brand new access keys and remove the old access keys. That is why an IAM user can have maximum two sets ( access keys ). generally, when utilizing the first set then to rotate them you will create a second set, update all your applications and command line to that new set and then delete the old ones.   
 
 ### IAM Identity Policies
 
